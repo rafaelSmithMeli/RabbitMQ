@@ -3,7 +3,6 @@ package com.rabbitmq.projeto2.model;
 import com.rabbitmq.projeto2.enums.StatusEmail;
 import jakarta.persistence.*;
 import lombok.Data;
-import org.springframework.data.annotation.Id;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
