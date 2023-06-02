@@ -18,12 +18,21 @@ public class EmailModel implements Serializable {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private UUID emailId;
-    private String ownerRef;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id")
+    private UserModel user;
+
     private String emailFrom;
+
     private String emailTo;
+
     private String subject;
+
     @Column(columnDefinition = "TEXT")
     private String text;
+
     private LocalDateTime sendDateEmail;
+
     private StatusEmail statusEmail;
 }
